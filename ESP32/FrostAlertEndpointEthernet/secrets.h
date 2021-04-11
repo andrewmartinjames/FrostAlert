@@ -9,7 +9,7 @@
 const char *ssid = "xxxxxxxx";
 const char *password = "xxxxxxxx";
 
- // Cloud iot details.
+ // Cloud iot details, may need to be updated for your project.
 const char *project_id = "frost-alert-21";
 const char *location = "us-central1";
 const char *registry_id = "endpoints";
