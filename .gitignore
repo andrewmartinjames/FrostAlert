@@ -32,3 +32,4 @@
 *.app
 
 GoogleService-Info.plist
+iOS/FrostAlert/Pods/
