@@ -3,12 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5670B6B94ED210D26964959D /* Pods_FrostAlertTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C340F3FF41C16283170BAE07 /* Pods_FrostAlertTests.framework */; };
-		72D58076B2D663E44020DEB8 /* Pods_FrostAlert_FrostAlertUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD7230E0EEC748778317E773 /* Pods_FrostAlert_FrostAlertUITests.framework */; };
+		2BBF8F64DFF4F038A7429457 /* Pods_FrostAlertTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A4280D7DDFABC603ED0D57B /* Pods_FrostAlertTests.framework */; };
+		3B75B77DC0F5739B35BF2E80 /* Pods_FrostAlert.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBF06B7E1C62A40C88FCC5A5 /* Pods_FrostAlert.framework */; };
+		C4E98E821219354E9B127B1B /* Pods_FrostAlert_FrostAlertUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 072F226563369953D782CEA6 /* Pods_FrostAlert_FrostAlertUITests.framework */; };
 		CFE6504B2623582C00FD25EE /* FrostAlertApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE6504A2623582C00FD25EE /* FrostAlertApp.swift */; };
 		CFE6504D2623582C00FD25EE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE6504C2623582C00FD25EE /* ContentView.swift */; };
 		CFE6504F2623582F00FD25EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFE6504E2623582F00FD25EE /* Assets.xcassets */; };
@@ -18,7 +19,7 @@
 		CFEF85CE26262A7E0017BE66 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CFEF85CD26262A7E0017BE66 /* GoogleService-Info.plist */; };
 		CFEF85CF26262A7E0017BE66 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CFEF85CD26262A7E0017BE66 /* GoogleService-Info.plist */; };
 		CFEF85D026262A7E0017BE66 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CFEF85CD26262A7E0017BE66 /* GoogleService-Info.plist */; };
-		E47FEF6D4C80EA23510D7EB1 /* Pods_FrostAlert.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B7523977700938F8DE8E2C1 /* Pods_FrostAlert.framework */; };
+		CFEF860C262636330017BE66 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEF860B262636330017BE66 /* Endpoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,14 +40,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1181E1D3428ED95A05E85083 /* Pods-FrostAlert-FrostAlertUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FrostAlert-FrostAlertUITests.release.xcconfig"; path = "Target Support Files/Pods-FrostAlert-FrostAlertUITests/Pods-FrostAlert-FrostAlertUITests.release.xcconfig"; sourceTree = "<group>"; };
-		259FA6C88D506A96B3397D77 /* Pods-FrostAlert-FrostAlertUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FrostAlert-FrostAlertUITests.debug.xcconfig"; path = "Target Support Files/Pods-FrostAlert-FrostAlertUITests/Pods-FrostAlert-FrostAlertUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		2855BFBA3438A98CB14F66C3 /* Pods-FrostAlert.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FrostAlert.release.xcconfig"; path = "Target Support Files/Pods-FrostAlert/Pods-FrostAlert.release.xcconfig"; sourceTree = "<group>"; };
-		457AC1C347A23A93EFE2FA00 /* Pods-FrostAlertTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FrostAlertTests.debug.xcconfig"; path = "Target Support Files/Pods-FrostAlertTests/Pods-FrostAlertTests.debug.xcconfig"; sourceTree = "<group>"; };
-		59B2F5245FC1C1DF0AE82F4F /* Pods-FrostAlertTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FrostAlertTests.release.xcconfig"; path = "Target Support Files/Pods-FrostAlertTests/Pods-FrostAlertTests.release.xcconfig"; sourceTree = "<group>"; };
-		74372CEE006866C00D7A63CB /* Pods-FrostAlert.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FrostAlert.debug.xcconfig"; path = "Target Support Files/Pods-FrostAlert/Pods-FrostAlert.debug.xcconfig"; sourceTree = "<group>"; };
-		8B7523977700938F8DE8E2C1 /* Pods_FrostAlert.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FrostAlert.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C340F3FF41C16283170BAE07 /* Pods_FrostAlertTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FrostAlertTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		072F226563369953D782CEA6 /* Pods_FrostAlert_FrostAlertUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FrostAlert_FrostAlertUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1457E1539160DEBB704C3770 /* Pods-FrostAlert-FrostAlertUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FrostAlert-FrostAlertUITests.debug.xcconfig"; path = "Target Support Files/Pods-FrostAlert-FrostAlertUITests/Pods-FrostAlert-FrostAlertUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		3A5099F96957660290D6879E /* Pods-FrostAlert.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FrostAlert.debug.xcconfig"; path = "Target Support Files/Pods-FrostAlert/Pods-FrostAlert.debug.xcconfig"; sourceTree = "<group>"; };
+		4B1A9E1EE7BA5E562A5D6157 /* Pods-FrostAlert-FrostAlertUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FrostAlert-FrostAlertUITests.release.xcconfig"; path = "Target Support Files/Pods-FrostAlert-FrostAlertUITests/Pods-FrostAlert-FrostAlertUITests.release.xcconfig"; sourceTree = "<group>"; };
+		871A137E2D15FF6A955D3A30 /* Pods-FrostAlertTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FrostAlertTests.debug.xcconfig"; path = "Target Support Files/Pods-FrostAlertTests/Pods-FrostAlertTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8B71700BB663F19C3265DE30 /* Pods-FrostAlert.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FrostAlert.release.xcconfig"; path = "Target Support Files/Pods-FrostAlert/Pods-FrostAlert.release.xcconfig"; sourceTree = "<group>"; };
+		9A4280D7DDFABC603ED0D57B /* Pods_FrostAlertTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FrostAlertTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBF06B7E1C62A40C88FCC5A5 /* Pods_FrostAlert.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FrostAlert.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFE650472623582C00FD25EE /* FrostAlert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FrostAlert.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFE6504A2623582C00FD25EE /* FrostAlertApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrostAlertApp.swift; sourceTree = "<group>"; };
 		CFE6504C2623582C00FD25EE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -60,7 +61,8 @@
 		CFE650672623582F00FD25EE /* FrostAlertUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrostAlertUITests.swift; sourceTree = "<group>"; };
 		CFE650692623582F00FD25EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CFEF85CD26262A7E0017BE66 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		FD7230E0EEC748778317E773 /* Pods_FrostAlert_FrostAlertUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FrostAlert_FrostAlertUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFEF860B262636330017BE66 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		DDF010C3F8420C5F1A0482B0 /* Pods-FrostAlertTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FrostAlertTests.release.xcconfig"; path = "Target Support Files/Pods-FrostAlertTests/Pods-FrostAlertTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E47FEF6D4C80EA23510D7EB1 /* Pods_FrostAlert.framework in Frameworks */,
+				3B75B77DC0F5739B35BF2E80 /* Pods_FrostAlert.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,7 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5670B6B94ED210D26964959D /* Pods_FrostAlertTests.framework in Frameworks */,
+				2BBF8F64DFF4F038A7429457 /* Pods_FrostAlertTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,35 +86,34 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				72D58076B2D663E44020DEB8 /* Pods_FrostAlert_FrostAlertUITests.framework in Frameworks */,
+				C4E98E821219354E9B127B1B /* Pods_FrostAlert_FrostAlertUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		19DA2BE2D7A2028CE6C4076E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CBF06B7E1C62A40C88FCC5A5 /* Pods_FrostAlert.framework */,
+				072F226563369953D782CEA6 /* Pods_FrostAlert_FrostAlertUITests.framework */,
+				9A4280D7DDFABC603ED0D57B /* Pods_FrostAlertTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6240A349214655048F0C9929 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				74372CEE006866C00D7A63CB /* Pods-FrostAlert.debug.xcconfig */,
-				2855BFBA3438A98CB14F66C3 /* Pods-FrostAlert.release.xcconfig */,
-				259FA6C88D506A96B3397D77 /* Pods-FrostAlert-FrostAlertUITests.debug.xcconfig */,
-				1181E1D3428ED95A05E85083 /* Pods-FrostAlert-FrostAlertUITests.release.xcconfig */,
-				457AC1C347A23A93EFE2FA00 /* Pods-FrostAlertTests.debug.xcconfig */,
-				59B2F5245FC1C1DF0AE82F4F /* Pods-FrostAlertTests.release.xcconfig */,
+				3A5099F96957660290D6879E /* Pods-FrostAlert.debug.xcconfig */,
+				8B71700BB663F19C3265DE30 /* Pods-FrostAlert.release.xcconfig */,
+				1457E1539160DEBB704C3770 /* Pods-FrostAlert-FrostAlertUITests.debug.xcconfig */,
+				4B1A9E1EE7BA5E562A5D6157 /* Pods-FrostAlert-FrostAlertUITests.release.xcconfig */,
+				871A137E2D15FF6A955D3A30 /* Pods-FrostAlertTests.debug.xcconfig */,
+				DDF010C3F8420C5F1A0482B0 /* Pods-FrostAlertTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		A5A9F587D5CED628E81430A0 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				8B7523977700938F8DE8E2C1 /* Pods_FrostAlert.framework */,
-				FD7230E0EEC748778317E773 /* Pods_FrostAlert_FrostAlertUITests.framework */,
-				C340F3FF41C16283170BAE07 /* Pods_FrostAlertTests.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		CFE6503E2623582C00FD25EE = {
@@ -123,7 +124,7 @@
 				CFE650662623582F00FD25EE /* FrostAlertUITests */,
 				CFE650482623582C00FD25EE /* Products */,
 				6240A349214655048F0C9929 /* Pods */,
-				A5A9F587D5CED628E81430A0 /* Frameworks */,
+				19DA2BE2D7A2028CE6C4076E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -140,6 +141,7 @@
 		CFE650492623582C00FD25EE /* FrostAlert */ = {
 			isa = PBXGroup;
 			children = (
+				CFEF860A262635F10017BE66 /* Data Model */,
 				CFE650502623582F00FD25EE /* Preview Content */,
 				CFEF85CC262553940017BE66 /* Views */,
 				CFE6504A2623582C00FD25EE /* FrostAlertApp.swift */,
@@ -184,6 +186,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		CFEF860A262635F10017BE66 /* Data Model */ = {
+			isa = PBXGroup;
+			children = (
+				CFEF860B262636330017BE66 /* Endpoint.swift */,
+			);
+			path = "Data Model";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -191,11 +201,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CFE6506C2623582F00FD25EE /* Build configuration list for PBXNativeTarget "FrostAlert" */;
 			buildPhases = (
-				1738A9F5E2BF94A725A0351E /* [CP] Check Pods Manifest.lock */,
+				B0173C4EA27AFFED28B339C3 /* [CP] Check Pods Manifest.lock */,
 				CFE650432623582C00FD25EE /* Sources */,
 				CFE650442623582C00FD25EE /* Frameworks */,
 				CFE650452623582C00FD25EE /* Resources */,
-				8100ED6C693EC2A57D286A43 /* [CP] Embed Pods Frameworks */,
+				BCB30B3C57B926A15F94ED26 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -210,7 +220,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CFE6506F2623582F00FD25EE /* Build configuration list for PBXNativeTarget "FrostAlertTests" */;
 			buildPhases = (
-				21218D7C6209DF2DB2CC2F90 /* [CP] Check Pods Manifest.lock */,
+				DE48E8B548902D86C0E14862 /* [CP] Check Pods Manifest.lock */,
 				CFE650542623582F00FD25EE /* Sources */,
 				CFE650552623582F00FD25EE /* Frameworks */,
 				CFE650562623582F00FD25EE /* Resources */,
@@ -229,11 +239,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CFE650722623582F00FD25EE /* Build configuration list for PBXNativeTarget "FrostAlertUITests" */;
 			buildPhases = (
-				8DCAD137E392BA9479FE78E6 /* [CP] Check Pods Manifest.lock */,
+				FD351D17588FB1DCDBAF5EB5 /* [CP] Check Pods Manifest.lock */,
 				CFE6505F2623582F00FD25EE /* Sources */,
 				CFE650602623582F00FD25EE /* Frameworks */,
 				CFE650612623582F00FD25EE /* Resources */,
-				223318F9CBB426C8C2A5969D /* [CP] Embed Pods Frameworks */,
+				9215C78F5C84718D510DD5B6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -317,7 +327,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1738A9F5E2BF94A725A0351E /* [CP] Check Pods Manifest.lock */ = {
+		9215C78F5C84718D510DD5B6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FrostAlert-FrostAlertUITests/Pods-FrostAlert-FrostAlertUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FrostAlert-FrostAlertUITests/Pods-FrostAlert-FrostAlertUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FrostAlert-FrostAlertUITests/Pods-FrostAlert-FrostAlertUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B0173C4EA27AFFED28B339C3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -339,7 +366,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		21218D7C6209DF2DB2CC2F90 /* [CP] Check Pods Manifest.lock */ = {
+		BCB30B3C57B926A15F94ED26 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FrostAlert/Pods-FrostAlert-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FrostAlert/Pods-FrostAlert-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FrostAlert/Pods-FrostAlert-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE48E8B548902D86C0E14862 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -361,41 +405,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		223318F9CBB426C8C2A5969D /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FrostAlert-FrostAlertUITests/Pods-FrostAlert-FrostAlertUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FrostAlert-FrostAlertUITests/Pods-FrostAlert-FrostAlertUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FrostAlert-FrostAlertUITests/Pods-FrostAlert-FrostAlertUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8100ED6C693EC2A57D286A43 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FrostAlert/Pods-FrostAlert-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FrostAlert/Pods-FrostAlert-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FrostAlert/Pods-FrostAlert-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8DCAD137E392BA9479FE78E6 /* [CP] Check Pods Manifest.lock */ = {
+		FD351D17588FB1DCDBAF5EB5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -425,6 +435,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFE6504D2623582C00FD25EE /* ContentView.swift in Sources */,
+				CFEF860C262636330017BE66 /* Endpoint.swift in Sources */,
 				CFE6504B2623582C00FD25EE /* FrostAlertApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -579,7 +590,7 @@
 		};
 		CFE6506D2623582F00FD25EE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 74372CEE006866C00D7A63CB /* Pods-FrostAlert.debug.xcconfig */;
+			baseConfigurationReference = 3A5099F96957660290D6879E /* Pods-FrostAlert.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -601,7 +612,7 @@
 		};
 		CFE6506E2623582F00FD25EE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2855BFBA3438A98CB14F66C3 /* Pods-FrostAlert.release.xcconfig */;
+			baseConfigurationReference = 8B71700BB663F19C3265DE30 /* Pods-FrostAlert.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -623,7 +634,7 @@
 		};
 		CFE650702623582F00FD25EE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 457AC1C347A23A93EFE2FA00 /* Pods-FrostAlertTests.debug.xcconfig */;
+			baseConfigurationReference = 871A137E2D15FF6A955D3A30 /* Pods-FrostAlertTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -645,7 +656,7 @@
 		};
 		CFE650712623582F00FD25EE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 59B2F5245FC1C1DF0AE82F4F /* Pods-FrostAlertTests.release.xcconfig */;
+			baseConfigurationReference = DDF010C3F8420C5F1A0482B0 /* Pods-FrostAlertTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -667,7 +678,7 @@
 		};
 		CFE650732623582F00FD25EE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 259FA6C88D506A96B3397D77 /* Pods-FrostAlert-FrostAlertUITests.debug.xcconfig */;
+			baseConfigurationReference = 1457E1539160DEBB704C3770 /* Pods-FrostAlert-FrostAlertUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -687,7 +698,7 @@
 		};
 		CFE650742623582F00FD25EE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1181E1D3428ED95A05E85083 /* Pods-FrostAlert-FrostAlertUITests.release.xcconfig */;
+			baseConfigurationReference = 4B1A9E1EE7BA5E562A5D6157 /* Pods-FrostAlert-FrostAlertUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

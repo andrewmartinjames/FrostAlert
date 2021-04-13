@@ -10,6 +10,7 @@ target 'FrostAlert' do
   pod 'Firebase/Analytics'
   pod 'Firebase/Firestore'
   pod 'Firebase/Messaging'
+  pod 'FirebaseFirestoreSwift', '~> 7.10-beta'
 
   target 'FrostAlertTests' do
     inherit! :search_paths
