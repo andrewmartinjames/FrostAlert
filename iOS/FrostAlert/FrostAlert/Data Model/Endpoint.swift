@@ -6,9 +6,11 @@
 //
 
 import Foundation
+import FirebaseFirestore
+import FirebaseFirestoreSwift
 
-struct Endpoint: Identifiable {
-    var id: String
+struct Endpoint: Identifiable, Codable {
+    @DocumentID var id: String?
     var currentHum: Double
     var currentTemp: Double
 }
