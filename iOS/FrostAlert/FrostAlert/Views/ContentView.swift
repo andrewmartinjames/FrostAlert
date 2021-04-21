@@ -10,6 +10,7 @@ let primary: Color = .gray
 
 struct ContentView: View {
     @State var settingsIsShowing = false
+    @State var notificationThreshold = 34.0
     var body: some View {
         VStack {
             Text("DeviceName")
@@ -35,7 +36,7 @@ struct ContentView: View {
             }
             .foregroundColor(.blue)
             .sheet(isPresented: $settingsIsShowing, content: {
-                SettingsView(settingsIsShowing: $settingsIsShowing)
+                SettingsView(settingsIsShowing: $settingsIsShowing, notificationThreshold: $notificationThreshold)
             })
         }
         .foregroundColor(primary)
@@ -44,6 +45,8 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        Group {
+            ContentView()
+        }
     }
 }
