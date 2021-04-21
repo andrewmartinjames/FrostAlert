@@ -9,11 +9,12 @@ import SwiftUI
 let primary: Color = .gray
 
 struct ContentView: View {
+    @State var settingsIsShowing = false
     var body: some View {
         VStack {
             Text("DeviceName")
-                .padding()
                 .font(.largeTitle)
+                .padding()
             Text("TMP ºF")
                 .padding()
                 .font(.custom("Temp", size: 40, relativeTo: .largeTitle))
@@ -29,13 +30,15 @@ struct ContentView: View {
             Image(systemName: "snow")
                 .font(.custom("Symbol", size: 80, relativeTo: .largeTitle))
                 .padding()
-            Button(action: {print("Test")}) {
-                Text("Settings")
-                    .foregroundColor(.blue)
+            Button("Settings") {
+                settingsIsShowing = true
             }
+            .foregroundColor(.blue)
+            .sheet(isPresented: $settingsIsShowing, content: {
+                SettingsView(settingsIsShowing: $settingsIsShowing)
+            })
         }
         .foregroundColor(primary)
-        .scaledToFill()
     }
 }
 
