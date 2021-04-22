@@ -11,6 +11,8 @@
 		3B75B77DC0F5739B35BF2E80 /* Pods_FrostAlert.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBF06B7E1C62A40C88FCC5A5 /* Pods_FrostAlert.framework */; };
 		C4E98E821219354E9B127B1B /* Pods_FrostAlert_FrostAlertUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 072F226563369953D782CEA6 /* Pods_FrostAlert_FrostAlertUITests.framework */; };
 		CF62418E2630B19E008E91CC /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF62418D2630B19E008E91CC /* SettingsView.swift */; };
+		CF6241932630BFB8008E91CC /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6241922630BFB8008E91CC /* SignInView.swift */; };
+		CF6241982630BFF9008E91CC /* SetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6241972630BFF9008E91CC /* SetupView.swift */; };
 		CFE6504B2623582C00FD25EE /* FrostAlertApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE6504A2623582C00FD25EE /* FrostAlertApp.swift */; };
 		CFE6504D2623582C00FD25EE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE6504C2623582C00FD25EE /* ContentView.swift */; };
 		CFE6504F2623582F00FD25EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFE6504E2623582F00FD25EE /* Assets.xcassets */; };
@@ -51,6 +53,8 @@
 		9A4280D7DDFABC603ED0D57B /* Pods_FrostAlertTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FrostAlertTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBF06B7E1C62A40C88FCC5A5 /* Pods_FrostAlert.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FrostAlert.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF62418D2630B19E008E91CC /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		CF6241922630BFB8008E91CC /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		CF6241972630BFF9008E91CC /* SetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupView.swift; sourceTree = "<group>"; };
 		CFE650472623582C00FD25EE /* FrostAlert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FrostAlert.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFE6504A2623582C00FD25EE /* FrostAlertApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrostAlertApp.swift; sourceTree = "<group>"; };
 		CFE6504C2623582C00FD25EE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -187,6 +191,8 @@
 			isa = PBXGroup;
 			children = (
 				CFE6504C2623582C00FD25EE /* ContentView.swift */,
+				CF6241922630BFB8008E91CC /* SignInView.swift */,
+				CF6241972630BFF9008E91CC /* SetupView.swift */,
 				CF62418D2630B19E008E91CC /* SettingsView.swift */,
 			);
 			path = Views;
@@ -448,8 +454,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF6241932630BFB8008E91CC /* SignInView.swift in Sources */,
 				CF62418E2630B19E008E91CC /* SettingsView.swift in Sources */,
 				CFEF863426263BFE0017BE66 /* EndpointRepository.swift in Sources */,
+				CF6241982630BFF9008E91CC /* SetupView.swift in Sources */,
 				CFE6504D2623582C00FD25EE /* ContentView.swift in Sources */,
 				CFEF860C262636330017BE66 /* Endpoint.swift in Sources */,
 				CFE6504B2623582C00FD25EE /* FrostAlertApp.swift in Sources */,

@@ -11,8 +11,19 @@ let primary: Color = .gray
 struct ContentView: View {
     @State var settingsIsShowing = false
     @State var notificationThreshold = 34.0
+    @ObservedObject private var endpoints = EndpointRepository()
+    
     var body: some View {
-        VStack {
+        List(endpoints.endpoints) { endpoint in
+            VStack {
+                Text("Current hum: \(endpoint.currentHum)")
+            }
+        }
+        .onAppear() {
+            self.endpoints.loadEndpoints()
+            print(endpoints.endpoints[0].currentHum)
+        }
+       /* VStack {
             Text("DeviceName")
                 .font(.largeTitle)
                 .padding()
@@ -39,7 +50,7 @@ struct ContentView: View {
                 SettingsView(settingsIsShowing: $settingsIsShowing, notificationThreshold: $notificationThreshold)
             })
         }
-        .foregroundColor(primary)
+        .foregroundColor(primary) */
     }
 }
 

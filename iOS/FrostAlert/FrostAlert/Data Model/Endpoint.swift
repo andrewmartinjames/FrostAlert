@@ -10,8 +10,13 @@ import FirebaseFirestore
 import FirebaseFirestoreSwift
 
 struct Endpoint: Identifiable, Codable {
-    @DocumentID var id: String?
+    @DocumentID var id: String? = UUID().uuidString
     var currentHum: Double
     var currentTemp: Double
+    
+    enum CodingKeys: String, CodingKey {
+        case currentHum = "current_hum"
+        case currentTemp = "current_temp"
+    }
 }
 

@@ -13,12 +13,13 @@ class EndpointRepository: ObservableObject {
     let db = Firestore.firestore()
     @Published var endpoints = [Endpoint]()
     
-    func loadData() {
+    func loadEndpoints() {
         db.collection("endpoints").addSnapshotListener { (querySnapshot, error) in
-            if let querySnapshot = querySnapshot {
-                self.endpoints = querySnapshot.documents.compactMap { document in
-                    try? document.data(as: Endpoint.self) // try to decode data into Endpoint
-                }
+            guard let documents = querySnapshot?.documents else {
+                return
+            }
+            self.endpoints = documents.compactMap { (queryDocumentSnapshot) -> Endpoint? in
+                return try? queryDocumentSnapshot.data(as: Endpoint.self)
             }
         }
     }
