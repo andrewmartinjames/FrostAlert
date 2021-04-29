@@ -15,41 +15,40 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            List(endpoints.endpoints) { endpoint in
-                VStack {
-                    Text("Current hum: \(endpoint.currentHum)")
-                }
-            }
-            .onAppear() {
-                self.endpoints.loadEndpoints()
-                print(endpoints.endpoints.isEmpty)
-            }
-            
-            Text("DeviceName")
+            let endpoint = endpoints.endpoints.first
+            Spacer()
+            Text(endpoint?.id ?? "not connected")
                 .font(.largeTitle)
-                .padding()
-            Text("TMP ºF")
+                //.padding()
+            Text(String(format: "%.2f%@", endpoint?.currentTemp ?? 0.0, "ºC"))
                 .padding()
                 .font(.custom("Temp", size: 40, relativeTo: .largeTitle))
-            Text("RH%")
+            Text(String(format: "%.1f %@", endpoint?.currentHum ?? 0.0, "%"))
                 .font(.largeTitle)
             Text("Relative Humidity")
                 .padding(.bottom)
-                .font(.headline)
+                .font(.title2)
             Text("Reported Weather:")
-                .font(.headline)
+                .font(.title2)
+                .padding(.top)
             Text("Cloudy, RTMP ºF")
-                .font(.headline)
+                .font(.title2)
+
+            Spacer()
             Image(systemName: "snow")
                 .font(.custom("Symbol", size: 80, relativeTo: .largeTitle))
                 .padding()
             Button("Settings") {
                 settingsIsShowing = true
             }
-            .foregroundColor(.blue)
-            .sheet(isPresented: $settingsIsShowing, content: {
-                SettingsView(settingsIsShowing: $settingsIsShowing, notificationThreshold: $notificationThreshold)
-            })
+                .foregroundColor(.blue)
+                .sheet(isPresented: $settingsIsShowing, content: {
+                    SettingsView(settingsIsShowing: $settingsIsShowing, notificationThreshold: $notificationThreshold)
+                })
+        }
+        .onAppear() {
+            self.endpoints.loadEndpoints()
+            print(endpoints.endpoints.isEmpty)
         }
         .foregroundColor(primary)
     }
