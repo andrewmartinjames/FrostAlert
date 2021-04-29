@@ -14,16 +14,17 @@ struct ContentView: View {
     @ObservedObject private var endpoints = EndpointRepository()
     
     var body: some View {
-        List(endpoints.endpoints) { endpoint in
-            VStack {
-                Text("Current hum: \(endpoint.currentHum)")
+        VStack {
+            List(endpoints.endpoints) { endpoint in
+                VStack {
+                    Text("Current hum: \(endpoint.currentHum)")
+                }
             }
-        }
-        .onAppear() {
-            self.endpoints.loadEndpoints()
-            print(endpoints.endpoints[0].currentHum)
-        }
-       /* VStack {
+            .onAppear() {
+                self.endpoints.loadEndpoints()
+                print(endpoints.endpoints.isEmpty)
+            }
+            
             Text("DeviceName")
                 .font(.largeTitle)
                 .padding()
@@ -50,7 +51,7 @@ struct ContentView: View {
                 SettingsView(settingsIsShowing: $settingsIsShowing, notificationThreshold: $notificationThreshold)
             })
         }
-        .foregroundColor(primary) */
+        .foregroundColor(primary)
     }
 }
 
