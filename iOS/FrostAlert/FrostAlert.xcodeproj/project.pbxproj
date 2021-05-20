@@ -226,6 +226,7 @@
 				CFE650442623582C00FD25EE /* Frameworks */,
 				CFE650452623582C00FD25EE /* Resources */,
 				BCB30B3C57B926A15F94ED26 /* [CP] Embed Pods Frameworks */,
+				F045249C80C12D10D3BBA95F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -264,6 +265,7 @@
 				CFE650602623582F00FD25EE /* Frameworks */,
 				CFE650612623582F00FD25EE /* Resources */,
 				9215C78F5C84718D510DD5B6 /* [CP] Embed Pods Frameworks */,
+				DC446FACE9E22BBBD90932D6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -403,6 +405,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FrostAlert/Pods-FrostAlert-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		DC446FACE9E22BBBD90932D6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FrostAlert-FrostAlertUITests/Pods-FrostAlert-FrostAlertUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FrostAlert-FrostAlertUITests/Pods-FrostAlert-FrostAlertUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FrostAlert-FrostAlertUITests/Pods-FrostAlert-FrostAlertUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		DE48E8B548902D86C0E14862 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -423,6 +442,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F045249C80C12D10D3BBA95F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FrostAlert/Pods-FrostAlert-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FrostAlert/Pods-FrostAlert-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FrostAlert/Pods-FrostAlert-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD351D17588FB1DCDBAF5EB5 /* [CP] Check Pods Manifest.lock */ = {
