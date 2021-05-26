@@ -4,20 +4,21 @@
 //
 //  Created by Andrew James on 4/11/21.
 //
-
+import Foundation
 import SwiftUI
 import UIKit // needed for App Delegate functionality to configure Firebase
 import Firebase
 import GoogleSignIn
+import Combine
 
 
 @main
 struct FrostAlertApp: App {
+    var session = SessionStore.shared
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate // confgure Firebase on startup
     var body: some Scene {
         WindowGroup {
-            SignInView()
-            // ContentView()
+            ContentView().environmentObject(session)
         }
     }
 }
@@ -45,7 +46,6 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 
 extension AppDelegate: GIDSignInDelegate {
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
-        
         //handle sign-in errors
         if let error = error {
             if (error as NSError).code == GIDSignInErrorCode.hasNoAuthInKeychain.rawValue {

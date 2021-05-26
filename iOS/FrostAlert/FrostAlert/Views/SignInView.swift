@@ -10,9 +10,24 @@ import GoogleSignIn
 
 struct SignInView: View {
     var body: some View {
-        VStack {
-            SignInButton()
-            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            Color.gray
+                .ignoresSafeArea()
+            VStack {
+                Spacer(minLength: 50)
+                Text("Sign in with Google to register your endpoints across devices")
+                    .font(.largeTitle)
+                    .multilineTextAlignment(.center)
+                Spacer(minLength: 100)
+                Image(systemName: "snow")
+                    .font(.custom("Symbol", size: 150, relativeTo: .largeTitle))
+                    .padding()
+                Spacer(minLength: 100)
+                SignInButton()
+                    .padding(30)
+            }
+            .padding()
+            .foregroundColor(Color.white)
         }
     }
 }
@@ -30,8 +45,8 @@ struct SignInButton: UIViewRepresentable {
     func updateUIView(_ uiView: UIViewType, context: Context) {}
 }
 
-struct SignInView_Previews: PreviewProvider {
-    static var previews: some View {
-        SignInView()
-    }
-}
+//struct SignInView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        SignInView()
+//    }
+//}

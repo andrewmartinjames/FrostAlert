@@ -13,6 +13,8 @@
 		CF62418E2630B19E008E91CC /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF62418D2630B19E008E91CC /* SettingsView.swift */; };
 		CF6241932630BFB8008E91CC /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6241922630BFB8008E91CC /* SignInView.swift */; };
 		CF6241982630BFF9008E91CC /* SetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6241972630BFF9008E91CC /* SetupView.swift */; };
+		CFDF9503265ECB0A00EEDDCF /* SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDF9502265ECB0A00EEDDCF /* SessionStore.swift */; };
+		CFDF9508265ECC6700EEDDCF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDF9507265ECC6700EEDDCF /* User.swift */; };
 		CFE6504B2623582C00FD25EE /* FrostAlertApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE6504A2623582C00FD25EE /* FrostAlertApp.swift */; };
 		CFE6504D2623582C00FD25EE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE6504C2623582C00FD25EE /* ContentView.swift */; };
 		CFE6504F2623582F00FD25EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFE6504E2623582F00FD25EE /* Assets.xcassets */; };
@@ -55,6 +57,8 @@
 		CF62418D2630B19E008E91CC /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		CF6241922630BFB8008E91CC /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		CF6241972630BFF9008E91CC /* SetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupView.swift; sourceTree = "<group>"; };
+		CFDF9502265ECB0A00EEDDCF /* SessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStore.swift; sourceTree = "<group>"; };
+		CFDF9507265ECC6700EEDDCF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CFE650472623582C00FD25EE /* FrostAlert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FrostAlert.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFE6504A2623582C00FD25EE /* FrostAlertApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrostAlertApp.swift; sourceTree = "<group>"; };
 		CFE6504C2623582C00FD25EE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -202,6 +206,8 @@
 			isa = PBXGroup;
 			children = (
 				CFEF860B262636330017BE66 /* Endpoint.swift */,
+				CFDF9502265ECB0A00EEDDCF /* SessionStore.swift */,
+				CFDF9507265ECC6700EEDDCF /* User.swift */,
 			);
 			path = "Data Model";
 			sourceTree = "<group>";
@@ -495,7 +501,9 @@
 				CFEF863426263BFE0017BE66 /* EndpointRepository.swift in Sources */,
 				CF6241982630BFF9008E91CC /* SetupView.swift in Sources */,
 				CFE6504D2623582C00FD25EE /* ContentView.swift in Sources */,
+				CFDF9503265ECB0A00EEDDCF /* SessionStore.swift in Sources */,
 				CFEF860C262636330017BE66 /* Endpoint.swift in Sources */,
+				CFDF9508265ECC6700EEDDCF /* User.swift in Sources */,
 				CFE6504B2623582C00FD25EE /* FrostAlertApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

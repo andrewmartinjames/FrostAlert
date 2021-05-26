@@ -6,10 +6,12 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 struct SettingsView: View {
     @Binding var settingsIsShowing: Bool
     @Binding var notificationThreshold: Double
+    @Binding var cOrF: String
     var body: some View {
         NavigationView {
             VStack {
@@ -18,9 +20,9 @@ struct SettingsView: View {
                     .foregroundColor(.gray)
                     .font(.title)
                 
-                Picker(selection: /*@START_MENU_TOKEN@*/.constant(1)/*@END_MENU_TOKEN@*/, label: /*@START_MENU_TOKEN@*/Text("Picker")/*@END_MENU_TOKEN@*/) {
-                    Text("Celsius").tag("C")
-                    Text("Fahrenheit").tag("F")
+                Picker("Unit", selection: $cOrF) {
+                    Text("Celsius").tag("Celsius")
+                    Text("Fahrenheit").tag("Fahrenheit")
                 }
                 .pickerStyle(SegmentedPickerStyle())
                 .padding(.horizontal, 50)
@@ -31,9 +33,10 @@ struct SettingsView: View {
                     .foregroundColor(.gray)
                     .font(.title)
                 
-                Slider(value: $notificationThreshold, in: 30...40)
+                Slider(value: $notificationThreshold, in: -2...5, step: 0.2)
                     .padding(.horizontal, 50)
-                
+                Text(cOrF == "Celsius" ? "\(String(format: "%.2f", notificationThreshold))" : "\(String(format: "%.2f", (notificationThreshold*9/5)+32))")
+                    .foregroundColor(.blue)
                 Spacer().frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, idealWidth: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, maxWidth: 300, minHeight: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, idealHeight: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, maxHeight: 300, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                 Button("Change Device") {
                     print("Go to change device view")
@@ -43,6 +46,12 @@ struct SettingsView: View {
                 .foregroundColor(.blue)
                 
                 Button("Log Out") {
+                    let firebaseAuth = Auth.auth()
+                    do {
+                      try firebaseAuth.signOut()
+                    } catch let signOutError as NSError {
+                      print ("Error signing out: %@", signOutError)
+                    }
                     print("Log out of account & return to Sign in view")
                 }
                 .padding()
@@ -52,6 +61,8 @@ struct SettingsView: View {
             .navigationBarTitle("Settings", displayMode: .inline)
             .navigationBarItems(trailing: Button(action: {
                     print("Dismissing sheet view...")
+                    print(cOrF)
+                    print(notificationThreshold)
                     self.settingsIsShowing = false
                 }) {
                 Text("Done").bold().foregroundColor(.blue)
@@ -60,10 +71,10 @@ struct SettingsView: View {
     }
 }
 
-struct SettingsView_Previews: PreviewProvider {
-    @State static var settingsShowing = true
-    @State static var notificationThreshold = 34.0
-    static var previews: some View {
-        SettingsView(settingsIsShowing: $settingsShowing, notificationThreshold: $notificationThreshold)
-    }
-}
+//struct SettingsView_Previews: PreviewProvider {
+//    @State static var settingsShowing = true
+//    @State static var notificationThreshold = 34.0
+//    static var previews: some View {
+//        SettingsView(settingsIsShowing: $settingsShowing, notificationThreshold: $notificationThreshold)
+//    }
+//}
