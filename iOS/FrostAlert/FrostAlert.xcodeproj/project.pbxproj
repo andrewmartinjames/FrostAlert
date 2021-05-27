@@ -27,7 +27,6 @@
 		CFEF85CF26262A7E0017BE66 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CFEF85CD26262A7E0017BE66 /* GoogleService-Info.plist */; };
 		CFEF85D026262A7E0017BE66 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CFEF85CD26262A7E0017BE66 /* GoogleService-Info.plist */; };
 		CFEF860C262636330017BE66 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEF860B262636330017BE66 /* Endpoint.swift */; };
-		CFEF863426263BFE0017BE66 /* EndpointRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEF863326263BFE0017BE66 /* EndpointRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,7 +76,6 @@
 		CFE650692623582F00FD25EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CFEF85CD26262A7E0017BE66 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CFEF860B262636330017BE66 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
-		CFEF863326263BFE0017BE66 /* EndpointRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointRepository.swift; sourceTree = "<group>"; };
 		DDF010C3F8420C5F1A0482B0 /* Pods-FrostAlertTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FrostAlertTests.release.xcconfig"; path = "Target Support Files/Pods-FrostAlertTests/Pods-FrostAlertTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -158,7 +156,6 @@
 			isa = PBXGroup;
 			children = (
 				CFE6504A2623582C00FD25EE /* FrostAlertApp.swift */,
-				CFEF863226263B940017BE66 /* Repositories */,
 				CFEF860A262635F10017BE66 /* Data Model */,
 				CFEF85CC262553940017BE66 /* Views */,
 				CFE650502623582F00FD25EE /* Preview Content */,
@@ -216,14 +213,6 @@
 				CFDF9514265F264C00EEDDCF /* DBDocuments.swift */,
 			);
 			path = "Data Model";
-			sourceTree = "<group>";
-		};
-		CFEF863226263B940017BE66 /* Repositories */ = {
-			isa = PBXGroup;
-			children = (
-				CFEF863326263BFE0017BE66 /* EndpointRepository.swift */,
-			);
-			path = Repositories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -504,7 +493,6 @@
 			files = (
 				CF6241932630BFB8008E91CC /* SignInView.swift in Sources */,
 				CF62418E2630B19E008E91CC /* SettingsView.swift in Sources */,
-				CFEF863426263BFE0017BE66 /* EndpointRepository.swift in Sources */,
 				CF6241982630BFF9008E91CC /* SetupView.swift in Sources */,
 				CFDF9510265F23E100EEDDCF /* DBUser.swift in Sources */,
 				CFE6504D2623582C00FD25EE /* ContentView.swift in Sources */,
