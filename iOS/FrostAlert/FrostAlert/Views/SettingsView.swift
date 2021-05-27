@@ -35,6 +35,9 @@ struct SettingsView: View {
                 
                 Slider(value: $notificationThreshold, in: -2...5, step: 0.2)
                     .padding(.horizontal, 50)
+                    .onChange(of: notificationThreshold, perform: { value in
+                        /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Code@*/ /*@END_MENU_TOKEN@*/
+                    })
                 Text(cOrF == "Celsius" ? "\(String(format: "%.2f", notificationThreshold))" : "\(String(format: "%.2f", (notificationThreshold*9/5)+32))")
                     .foregroundColor(.blue)
                 Spacer().frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, idealWidth: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, maxWidth: 300, minHeight: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, idealHeight: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, maxHeight: 300, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)

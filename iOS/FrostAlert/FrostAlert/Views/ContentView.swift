@@ -14,8 +14,8 @@ struct ContentView: View {
     @State var settingsIsShowing = false
     @State var notificationThreshold = 2.0
     @State var cOrF: String = "Celsius"
-    @ObservedObject private var endpoints = EndpointRepository()
     @EnvironmentObject var session: SessionStore
+    @ObservedObject private var docs = DBDocuments()
     
     var body: some View {
         Group {
@@ -23,7 +23,7 @@ struct ContentView: View {
                 SignInView()
             } else {
                 VStack {
-                    let endpoint = endpoints.endpoints.first
+                    let endpoint = docs.endpoint
                     Spacer()
                     Text(endpoint?.id ?? "not connected")
                         .font(.largeTitle)
@@ -61,8 +61,8 @@ struct ContentView: View {
                         })
                 }
                 .onAppear() {
-                    self.endpoints.loadEndpoints()
-                    print(endpoints.endpoints.isEmpty)
+                    self.docs.loadDBUser(uid: session.session?.uid ?? "")
+//                    print(endpoints.endpoints.isEmpty)        Used to show whether or not any documents were retrieved, deprecated
                 }
                 .foregroundColor(primary)
             }
