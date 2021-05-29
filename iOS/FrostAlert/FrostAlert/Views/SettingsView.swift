@@ -19,39 +19,50 @@ struct SettingsView: View {
         NavigationView {
             VStack {
                 Spacer()
-                Text("Set temperature unit:")
-                    .foregroundColor(.gray)
-                    .font(.title)
-                
-                Picker("Unit", selection: $cOrF) {
-                    Text("Celsius").tag("Celsius")
-                    Text("Fahrenheit").tag("Fahrenheit")
+                Group {
+                    Text("Set temperature unit:")
+                        .foregroundColor(.gray)
+                        .font(.title)
+                    
+                    Picker("Unit", selection: $cOrF) {
+                        Text("Celsius").tag("Celsius")
+                        Text("Fahrenheit").tag("Fahrenheit")
+                    }
+                    .pickerStyle(SegmentedPickerStyle())
+                    .padding(.horizontal, 50)
                 }
-                .pickerStyle(SegmentedPickerStyle())
-                .padding(.horizontal, 50)
+
+                Spacer()
+                
+                Group {
+                    Text("Set notification threshold:")
+                        .foregroundColor(.gray)
+                        .font(.title)
+                    
+                    Slider(value: $notificationThreshold, in: -2...5, step: 0.2)
+                        .padding(.horizontal, 50)
+                        .onChange(of: notificationThreshold, perform: { value in
+                            docs.changeTempThreshold(newThreshold: notificationThreshold)
+                            print(notificationThreshold)
+                        })
+                    Text(cOrF == "Celsius" ? "\(String(format: "%.2f", notificationThreshold))" : "\(String(format: "%.2f", (notificationThreshold*9/5)+32))")
+                        .foregroundColor(.blue)
+                }
                 
                 Spacer()
                 
-                Text("Set notification threshold:")
-                    .foregroundColor(.gray)
-                    .font(.title)
-                
-                Slider(value: $notificationThreshold, in: -2...5, step: 0.2)
-                    .padding(.horizontal, 50)
-                    .onChange(of: notificationThreshold, perform: { value in
-                        docs.changeTempThreshold(newThreshold: notificationThreshold)
-                        print(notificationThreshold)
+                Group {
+                    Text("Enter the ID of your device below:")
+                    TextField("Device ID", text: $deviceID, onCommit: {
+                        docs.setDevice(deviceID: deviceID)
                     })
-                Text(cOrF == "Celsius" ? "\(String(format: "%.2f", notificationThreshold))" : "\(String(format: "%.2f", (notificationThreshold*9/5)+32))")
-                    .foregroundColor(.blue)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .disableAutocorrection(true)
+                        .autocapitalization(.none)
+                        .padding(.horizontal, 50)
+                        .accentColor(Color.blue)
+                }
                 
-                TextField("Device ID", text: $deviceID, onCommit: {
-                    docs.setDevice(deviceID: deviceID)
-                })
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .disableAutocorrection(true)
-                    .autocapitalization(.none)
-                    .padding(.horizontal, 50)
                 
                 Spacer().frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, idealWidth: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, maxWidth: 300, minHeight: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, idealHeight: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, maxHeight: 300, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
   
