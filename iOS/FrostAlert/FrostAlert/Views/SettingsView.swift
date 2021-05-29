@@ -12,6 +12,9 @@ struct SettingsView: View {
     @Binding var settingsIsShowing: Bool
     @Binding var notificationThreshold: Double
     @Binding var cOrF: String
+    @EnvironmentObject var docs: DBDocuments
+    @Binding var deviceID: String
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -36,18 +39,22 @@ struct SettingsView: View {
                 Slider(value: $notificationThreshold, in: -2...5, step: 0.2)
                     .padding(.horizontal, 50)
                     .onChange(of: notificationThreshold, perform: { value in
-                        /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Code@*/ /*@END_MENU_TOKEN@*/
+                        docs.changeTempThreshold(newThreshold: notificationThreshold)
+                        print(notificationThreshold)
                     })
                 Text(cOrF == "Celsius" ? "\(String(format: "%.2f", notificationThreshold))" : "\(String(format: "%.2f", (notificationThreshold*9/5)+32))")
                     .foregroundColor(.blue)
-                Spacer().frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, idealWidth: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, maxWidth: 300, minHeight: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, idealHeight: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, maxHeight: 300, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                Button("Change Device") {
-                    print("Go to change device view")
-                }
-                .padding()
-                .font(.title2)
-                .foregroundColor(.blue)
                 
+                TextField("Device ID", text: $deviceID, onCommit: {
+                    docs.setDevice(deviceID: deviceID)
+                })
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .disableAutocorrection(true)
+                    .autocapitalization(.none)
+                    .padding(.horizontal, 50)
+                
+                Spacer().frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, idealWidth: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, maxWidth: 300, minHeight: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, idealHeight: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, maxHeight: 300, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+  
                 Button("Log Out") {
                     let firebaseAuth = Auth.auth()
                     do {

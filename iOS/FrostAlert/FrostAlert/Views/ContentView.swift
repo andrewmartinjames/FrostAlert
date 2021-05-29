@@ -16,6 +16,7 @@ struct ContentView: View {
     @State var cOrF: String = "Celsius"
     @EnvironmentObject var session: SessionStore
     @ObservedObject private var docs = DBDocuments()
+    @State var deviceID: String = ""
     
     var body: some View {
         Group {
@@ -42,12 +43,6 @@ struct ContentView: View {
                     Text("Relative Humidity")
                         .padding(.bottom)
                         .font(.title2)
-                    Text("Reported Weather:")
-                        .font(.title2)
-                        .padding(.top)
-                    Text("Cloudy, RTMP ºF")
-                        .font(.title2)
-
                     Spacer()
                     Image(systemName: "snow")
                         .font(.custom("Symbol", size: 80, relativeTo: .largeTitle))
@@ -55,14 +50,15 @@ struct ContentView: View {
                     Button("Settings") {
                         settingsIsShowing = true
                     }
+                        .padding()
                         .foregroundColor(.blue)
                         .sheet(isPresented: $settingsIsShowing, content: {
-                            SettingsView(settingsIsShowing: $settingsIsShowing, notificationThreshold: $notificationThreshold, cOrF: $cOrF)
+                            SettingsView(settingsIsShowing: $settingsIsShowing, notificationThreshold: $notificationThreshold, cOrF: $cOrF, deviceID: $deviceID)
+                                .environmentObject(docs)
                         })
                 }
                 .onAppear() {
                     self.docs.loadDBUser(uid: session.session?.uid ?? "")
-//                    print(endpoints.endpoints.isEmpty)        Used to show whether or not any documents were retrieved, deprecated
                 }
                 .foregroundColor(primary)
             }

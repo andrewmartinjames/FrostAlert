@@ -14,6 +14,7 @@ class DBDocuments: ObservableObject {
     let db = Firestore.firestore()
     @Published var endpoint: Endpoint?
     @Published var dbuser: DBUser?
+    @Published var deviceID: String?
     
     func loadDBUser(uid: String) {
         db.collection("users").document(uid)
@@ -42,12 +43,13 @@ class DBDocuments: ObservableObject {
     
     func loadEndpoint() {
         print("loadendpoint started")
-        guard var endpointName = self.dbuser?.endpoint else {
-            print("Endpoint name load failed")
+        guard self.dbuser?.endpoint != nil else {
+            print("no endpoint name available")
             return
         }
-        if endpointName != "" {
-        db.collection("endpoints").document(endpointName)
+        self.deviceID = self.dbuser!.endpoint
+        if deviceID != "" {
+            db.collection("endpoints").document(deviceID!)
             .addSnapshotListener { documentSnapshot, error in
                 guard let document = documentSnapshot else {
                     print("Error fetching document: \(error!)")
@@ -70,6 +72,27 @@ class DBDocuments: ObservableObject {
             }
         } else {
             print("no endpoint registered")
+        }
+    }
+    
+    func changeTempThreshold(newThreshold: Double) {
+        guard let uid = self.dbuser?.uid else {
+            print("Endpoint name load failed")
+            return
+        }
+        if uid != "" {
+            db.collection("users").document(uid).updateData(["threshold_temp": newThreshold])
+        }
+    }
+    
+    func setDevice(deviceID: String) {
+        guard let uid = self.dbuser?.uid else {
+            print("Endpoint name load failed")
+            return
+        }
+        if uid != "" {
+            db.collection("users").document(uid).updateData(["endpoint": deviceID])
+            db.collection("endpoints").document(deviceID).updateData(["user": uid])
         }
     }
 }
