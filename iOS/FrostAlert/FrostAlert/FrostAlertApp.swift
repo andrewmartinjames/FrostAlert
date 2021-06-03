@@ -183,5 +183,7 @@ extension AppDelegate: MessagingDelegate {
 //      NotificationCenter.default.post(name: Notification.Name("FCMToken"), object: nil, userInfo: dataDict)
       
         print(dataDict)
+        
+        SessionStore.shared.FCMToken = dataDict["token"]
     }
 }

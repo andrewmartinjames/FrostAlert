@@ -65,7 +65,14 @@ struct SettingsView: View {
                 
                 
                 Spacer().frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, idealWidth: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, maxWidth: 300, minHeight: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, idealHeight: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, maxHeight: 300, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-  
+                
+                Button("Get notifications") {
+                    docs.setFCMToken(fcmToken: SessionStore.shared.FCMToken ?? "")
+                }
+                .padding()
+                .font(.title2)
+                .foregroundColor(.blue)
+                
                 Button("Log Out") {
                     let firebaseAuth = Auth.auth()
                     do {

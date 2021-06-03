@@ -14,12 +14,14 @@ struct DBUser: Identifiable, Codable {
     var uid: String
     var endpoint: String
     var threshold_temp: Double
+    var fcmToken: String
     
     enum CodingKeys: String, CodingKey {
         case id
         case uid = "uid"
         case endpoint = "endpoint"
         case threshold_temp = "threshold_temp"
+        case fcmToken = "fcm_token"
     }
 }
 

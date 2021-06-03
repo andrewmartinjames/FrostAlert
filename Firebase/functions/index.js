@@ -15,6 +15,7 @@ exports.newUser = functions.auth.user().onCreate((user) => {
     uid: uid,
     endpoint: "/endpoints/",
     threshold_temp: 2.0,
+    fcm_token: "",
   });
 });
 

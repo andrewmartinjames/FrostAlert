@@ -95,5 +95,17 @@ class DBDocuments: ObservableObject {
             db.collection("endpoints").document(deviceID).updateData(["user": uid])
         }
     }
+    
+    
+    func setFCMToken(fcmToken: String) {
+        guard let uid = self.dbuser?.uid else {
+            print("Endpoint name load failed")
+            return
+        }
+        if uid != "" {
+            db.collection("users").document(uid).updateData(["fcm_token": fcmToken])
+        }
+        
+    }
 }
 

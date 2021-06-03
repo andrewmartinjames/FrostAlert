@@ -29,6 +29,7 @@ struct ContentView: View {
                     Text(endpoint?.id ?? "not connected")
                         .font(.largeTitle)
                         //.padding()
+                    //Text("\(session.FCMToken ?? "")")
                     if cOrF == "Celsius" {
                         Text(String(format: "%.2f%@", endpoint?.currentTemp ?? 0.0, "ºC"))
                             .padding()
