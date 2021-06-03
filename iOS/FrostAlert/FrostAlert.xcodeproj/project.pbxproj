@@ -12,7 +12,9 @@
 		C4E98E821219354E9B127B1B /* Pods_FrostAlert_FrostAlertUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 072F226563369953D782CEA6 /* Pods_FrostAlert_FrostAlertUITests.framework */; };
 		CF62418E2630B19E008E91CC /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF62418D2630B19E008E91CC /* SettingsView.swift */; };
 		CF6241932630BFB8008E91CC /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6241922630BFB8008E91CC /* SignInView.swift */; };
-		CF6241982630BFF9008E91CC /* SetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6241972630BFF9008E91CC /* SetupView.swift */; };
+		CF8636C026691BB5000282E9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF8636BF26691BB5000282E9 /* GoogleService-Info.plist */; };
+		CF8636C126691BB5000282E9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF8636BF26691BB5000282E9 /* GoogleService-Info.plist */; };
+		CF8636C226691BB5000282E9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF8636BF26691BB5000282E9 /* GoogleService-Info.plist */; };
 		CFDF9503265ECB0A00EEDDCF /* SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDF9502265ECB0A00EEDDCF /* SessionStore.swift */; };
 		CFDF9508265ECC6700EEDDCF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDF9507265ECC6700EEDDCF /* User.swift */; };
 		CFDF9510265F23E100EEDDCF /* DBUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDF950F265F23E100EEDDCF /* DBUser.swift */; };
@@ -23,9 +25,6 @@
 		CFE650522623582F00FD25EE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFE650512623582F00FD25EE /* Preview Assets.xcassets */; };
 		CFE6505D2623582F00FD25EE /* FrostAlertTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE6505C2623582F00FD25EE /* FrostAlertTests.swift */; };
 		CFE650682623582F00FD25EE /* FrostAlertUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE650672623582F00FD25EE /* FrostAlertUITests.swift */; };
-		CFEF85CE26262A7E0017BE66 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CFEF85CD26262A7E0017BE66 /* GoogleService-Info.plist */; };
-		CFEF85CF26262A7E0017BE66 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CFEF85CD26262A7E0017BE66 /* GoogleService-Info.plist */; };
-		CFEF85D026262A7E0017BE66 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CFEF85CD26262A7E0017BE66 /* GoogleService-Info.plist */; };
 		CFEF860C262636330017BE66 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEF860B262636330017BE66 /* Endpoint.swift */; };
 /* End PBXBuildFile section */
 
@@ -57,7 +56,7 @@
 		CBF06B7E1C62A40C88FCC5A5 /* Pods_FrostAlert.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FrostAlert.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF62418D2630B19E008E91CC /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		CF6241922630BFB8008E91CC /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
-		CF6241972630BFF9008E91CC /* SetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupView.swift; sourceTree = "<group>"; };
+		CF8636BF26691BB5000282E9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CFDF9502265ECB0A00EEDDCF /* SessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStore.swift; sourceTree = "<group>"; };
 		CFDF9507265ECC6700EEDDCF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CFDF950F265F23E100EEDDCF /* DBUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBUser.swift; sourceTree = "<group>"; };
@@ -74,8 +73,8 @@
 		CFE650632623582F00FD25EE /* FrostAlertUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FrostAlertUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFE650672623582F00FD25EE /* FrostAlertUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrostAlertUITests.swift; sourceTree = "<group>"; };
 		CFE650692623582F00FD25EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CFEF85CD26262A7E0017BE66 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CFEF860B262636330017BE66 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		CFFB67C826655234006839D0 /* FrostAlert.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FrostAlert.entitlements; sourceTree = "<group>"; };
 		DDF010C3F8420C5F1A0482B0 /* Pods-FrostAlertTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FrostAlertTests.release.xcconfig"; path = "Target Support Files/Pods-FrostAlertTests/Pods-FrostAlertTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -155,13 +154,14 @@
 		CFE650492623582C00FD25EE /* FrostAlert */ = {
 			isa = PBXGroup;
 			children = (
+				CFFB67C826655234006839D0 /* FrostAlert.entitlements */,
 				CFE6504A2623582C00FD25EE /* FrostAlertApp.swift */,
 				CFEF860A262635F10017BE66 /* Data Model */,
 				CFEF85CC262553940017BE66 /* Views */,
 				CFE650502623582F00FD25EE /* Preview Content */,
 				CFE6504E2623582F00FD25EE /* Assets.xcassets */,
 				CFE650532623582F00FD25EE /* Info.plist */,
-				CFEF85CD26262A7E0017BE66 /* GoogleService-Info.plist */,
+				CF8636BF26691BB5000282E9 /* GoogleService-Info.plist */,
 			);
 			path = FrostAlert;
 			sourceTree = "<group>";
@@ -197,7 +197,6 @@
 			children = (
 				CFE6504C2623582C00FD25EE /* ContentView.swift */,
 				CF6241922630BFB8008E91CC /* SignInView.swift */,
-				CF6241972630BFF9008E91CC /* SetupView.swift */,
 				CF62418D2630B19E008E91CC /* SettingsView.swift */,
 			);
 			path = Views;
@@ -326,8 +325,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFE650522623582F00FD25EE /* Preview Assets.xcassets in Resources */,
+				CF8636C026691BB5000282E9 /* GoogleService-Info.plist in Resources */,
 				CFE6504F2623582F00FD25EE /* Assets.xcassets in Resources */,
-				CFEF85CE26262A7E0017BE66 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,7 +334,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CFEF85CF26262A7E0017BE66 /* GoogleService-Info.plist in Resources */,
+				CF8636C126691BB5000282E9 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,7 +342,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CFEF85D026262A7E0017BE66 /* GoogleService-Info.plist in Resources */,
+				CF8636C226691BB5000282E9 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,7 +492,6 @@
 			files = (
 				CF6241932630BFB8008E91CC /* SignInView.swift in Sources */,
 				CF62418E2630B19E008E91CC /* SettingsView.swift in Sources */,
-				CF6241982630BFF9008E91CC /* SetupView.swift in Sources */,
 				CFDF9510265F23E100EEDDCF /* DBUser.swift in Sources */,
 				CFE6504D2623582C00FD25EE /* ContentView.swift in Sources */,
 				CFDF9503265ECB0A00EEDDCF /* SessionStore.swift in Sources */,
@@ -658,6 +656,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FrostAlert/FrostAlert.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"FrostAlert/Preview Content\"";
 				DEVELOPMENT_TEAM = 5PJX6HTBXL;
@@ -668,8 +668,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = andrewjames.FrostAlert;
+				PRODUCT_BUNDLE_IDENTIFIER = net.amjames.frostalert;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -681,6 +682,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FrostAlert/FrostAlert.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"FrostAlert/Preview Content\"";
 				DEVELOPMENT_TEAM = 5PJX6HTBXL;
@@ -726,8 +729,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = andrewjames.FrostAlert;
+				PRODUCT_BUNDLE_IDENTIFIER = net.amjames.frostalert;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

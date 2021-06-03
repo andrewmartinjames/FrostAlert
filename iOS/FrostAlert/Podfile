@@ -7,7 +7,6 @@ target 'FrostAlert' do
 
   # Pods for FrostAlert
   pod 'Firebase/Auth'
-  pod 'Firebase/Analytics'
   pod 'Firebase/Firestore'
   pod 'Firebase/Messaging'
   pod 'FirebaseFirestoreSwift', '~> 7.10-beta'

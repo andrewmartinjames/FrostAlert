@@ -23,7 +23,7 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>com.googleusercontent.apps.318442982468-s07bgqmih75iborjq3fe2e8pnqf3f69u</string>
+				<string>com.googleusercontent.apps.318442982468-ssnd2s87a7qbmmuvkljnei808dve77pr</string>
 			</array>
 		</dict>
 	</array>
@@ -38,6 +38,12 @@
 	</dict>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>fetch</string>
+		<string>processing</string>
+		<string>remote-notification</string>
+	</array>
 	<key>UILaunchScreen</key>
 	<dict/>
 	<key>UIRequiredDeviceCapabilities</key>
