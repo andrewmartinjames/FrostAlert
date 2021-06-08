@@ -1,8 +1,7 @@
 const functions = require("firebase-functions");
 const {Firestore} = require("@google-cloud/firestore");
-const firestore = new Firestore();
-
 const admin = require("firebase-admin");
+const firestore = new Firestore();
 admin.initializeApp();
 
 exports.newUser = functions.auth.user().onCreate((user) => {
